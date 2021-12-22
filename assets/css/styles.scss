@@ -1,8 +1,13 @@
 $main_red: #DD0B14;
 $dark_red: #a8050c;
 $gray: #626260;
+$dark_gray: #626260;
 * {
     font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
 }
 
 .white_button {
@@ -53,6 +58,15 @@ $gray: #626260;
     }
 }
 
+.gray_button {
+    background-color: $dark_gray;
+    color: white;
+    padding: 10px;
+    font-weight: 700;
+    border: none;
+    border-radius: 10px;
+}
+
 .promobar {
     background-color: $main_red;
     color: white;
@@ -68,7 +82,7 @@ $gray: #626260;
     }
 }
 
-nav {
+nav.navbar {
     background-color: $gray;
     border-radius: 0 0 100px 0;
     position: absolute!important;
@@ -399,6 +413,162 @@ footer {
             color: black;
             padding: 10px;
             border-radius: 20px;
+        }
+    }
+}
+
+.product-search {
+    background-color: #E3E4E3;
+    position: relative;
+    .brands--text {
+        p.text {
+            font-weight: 100;
+            text-align: center;
+            margin: 0;
+            font-size: 18px;
+        }
+        p.brands {
+            font-weight: 700;
+            text-align: center;
+            font-size: 18px;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 0 5px;
+            i {
+                color: $main_red;
+                font-size: 12px;
+            }
+        }
+    }
+    svg.cta {
+        position: absolute;
+        top: -1px;
+        width: 200px;
+        right: 0;
+        fill: $main_red;
+        @media only screen and (max-width: 767px) {
+            display: none;
+        }
+        path {
+            fill: $main_red;
+        }
+    }
+    a.cta {
+        position: absolute;
+        top: 45px;
+        right: 0;
+        color: white;
+        transform: rotateZ(45deg);
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: 700;
+        @media only screen and (max-width: 767px) {
+            display: none;
+        }
+    }
+    a.facebook {
+        position: absolute;
+        top: 25%;
+        right: 10px;
+        @media only screen and (max-width: 990px) {
+            display: none;
+        }
+        i {
+            color: #4267B2;
+            font-size: 80px;
+        }
+    }
+    a.whatsapp {
+        position: absolute;
+        top: 25%;
+        left: 10px;
+        @media only screen and (max-width: 990px) {
+            display: none;
+        }
+        i {
+            color: #25D366;
+            font-size: 80px;
+        }
+    }
+    .filters {
+        input {
+            border-radius: 25px;
+        }
+    }
+    p.title {
+        font-size: 32px;
+        font-weight: 700;
+        color: $dark_gray;
+        text-align: center;
+        padding-top: 20px;
+    }
+    table {
+        thead {
+            text-align: center;
+            font-size: 24px;
+            color: $dark_gray;
+            font-weight: 600;
+            background-color: white;
+            th {
+                &:first-of-type {
+                    border-radius: 20px 0 0 20px;
+                }
+                &:last-of-type {
+                    border-radius: 0 20px 20px 0;
+                }
+            }
+        }
+        tbody {
+            text-align: center;
+            &:before {
+                line-height: 1em;
+                content: ".";
+                color: #E3E4E3;
+                display: block;
+            }
+            tr {
+                &:first-of-type {
+                    td {
+                        &:first-of-type {
+                            border-top-left-radius: 20px;
+                        }
+                        &:last-of-type {
+                            border-top-right-radius: 20px;
+                        }
+                    }
+                }
+                &:last-of-type {
+                    td {
+                        &:first-of-type {
+                            border-bottom-left-radius: 20px;
+                        }
+                        &:last-of-type {
+                            border-bottom-right-radius: 20px;
+                        }
+                    }
+                }
+            }
+            img {
+                width: 100px;
+            }
+            td {
+                background-color: white;
+                vertical-align: middle;
+            }
+        }
+    }
+    nav {
+        .page-link,
+        .page-item.disabled .page-link {
+            background-color: transparent;
+            color: gray;
+        }
+        i {
+            font-size: 34px;
+            color: gray;
         }
     }
 }

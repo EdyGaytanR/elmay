@@ -2,6 +2,10 @@
   font-family: 'Poppins', sans-serif;
 }
 
+a {
+  text-decoration: none;
+}
+
 .white_button {
   background-color: white;
   color: #DD0B14;
@@ -53,6 +57,15 @@
   transition: all .5s ease;
 }
 
+.gray_button {
+  background-color: #626260;
+  color: white;
+  padding: 10px;
+  font-weight: 700;
+  border: none;
+  border-radius: 10px;
+}
+
 .promobar {
   background-color: #DD0B14;
   color: white;
@@ -70,7 +83,7 @@
   font-size: 22px;
 }
 
-nav {
+nav.navbar {
   background-color: #626260;
   border-radius: 0 0 100px 0;
   position: absolute !important;
@@ -78,29 +91,29 @@ nav {
 }
 
 @media only screen and (max-width: 990px) {
-  nav {
+  nav.navbar {
     border-radius: 0;
     position: relative !important;
   }
 }
 
-nav img.logo {
+nav.navbar img.logo {
   width: 120px;
 }
 
-nav ul.navbar-nav {
+nav.navbar ul.navbar-nav {
   flex-grow: 1;
   justify-content: space-around;
 }
 
-nav ul.navbar-nav a.nav-link {
+nav.navbar ul.navbar-nav a.nav-link {
   font-size: 18px;
   font-weight: 700;
   padding: 5px;
   width: fit-content;
 }
 
-nav ul.navbar-nav a.nav-link.active {
+nav.navbar ul.navbar-nav a.nav-link.active {
   border-bottom: 5px solid red;
 }
 
@@ -489,5 +502,178 @@ footer a i {
   color: black;
   padding: 10px;
   border-radius: 20px;
+}
+
+.product-search {
+  background-color: #E3E4E3;
+  position: relative;
+}
+
+.product-search .brands--text p.text {
+  font-weight: 100;
+  text-align: center;
+  margin: 0;
+  font-size: 18px;
+}
+
+.product-search .brands--text p.brands {
+  font-weight: 700;
+  text-align: center;
+  font-size: 18px;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0 5px;
+}
+
+.product-search .brands--text p.brands i {
+  color: #DD0B14;
+  font-size: 12px;
+}
+
+.product-search svg.cta {
+  position: absolute;
+  top: -1px;
+  width: 200px;
+  right: 0;
+  fill: #DD0B14;
+}
+
+@media only screen and (max-width: 767px) {
+  .product-search svg.cta {
+    display: none;
+  }
+}
+
+.product-search svg.cta path {
+  fill: #DD0B14;
+}
+
+.product-search a.cta {
+  position: absolute;
+  top: 45px;
+  right: 0;
+  color: white;
+  transform: rotateZ(45deg);
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+@media only screen and (max-width: 767px) {
+  .product-search a.cta {
+    display: none;
+  }
+}
+
+.product-search a.facebook {
+  position: absolute;
+  top: 25%;
+  right: 10px;
+}
+
+@media only screen and (max-width: 990px) {
+  .product-search a.facebook {
+    display: none;
+  }
+}
+
+.product-search a.facebook i {
+  color: #4267B2;
+  font-size: 80px;
+}
+
+.product-search a.whatsapp {
+  position: absolute;
+  top: 25%;
+  left: 10px;
+}
+
+@media only screen and (max-width: 990px) {
+  .product-search a.whatsapp {
+    display: none;
+  }
+}
+
+.product-search a.whatsapp i {
+  color: #25D366;
+  font-size: 80px;
+}
+
+.product-search .filters input {
+  border-radius: 25px;
+}
+
+.product-search p.title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #626260;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.product-search table thead {
+  text-align: center;
+  font-size: 24px;
+  color: #626260;
+  font-weight: 600;
+  background-color: white;
+}
+
+.product-search table thead th:first-of-type {
+  border-radius: 20px 0 0 20px;
+}
+
+.product-search table thead th:last-of-type {
+  border-radius: 0 20px 20px 0;
+}
+
+.product-search table tbody {
+  text-align: center;
+}
+
+.product-search table tbody:before {
+  line-height: 1em;
+  content: ".";
+  color: #E3E4E3;
+  display: block;
+}
+
+.product-search table tbody tr:first-of-type td:first-of-type {
+  border-top-left-radius: 20px;
+}
+
+.product-search table tbody tr:first-of-type td:last-of-type {
+  border-top-right-radius: 20px;
+}
+
+.product-search table tbody tr:last-of-type td:first-of-type {
+  border-bottom-left-radius: 20px;
+}
+
+.product-search table tbody tr:last-of-type td:last-of-type {
+  border-bottom-right-radius: 20px;
+}
+
+.product-search table tbody img {
+  width: 100px;
+}
+
+.product-search table tbody td {
+  background-color: white;
+  vertical-align: middle;
+}
+
+.product-search nav .page-link,
+.product-search nav .page-item.disabled .page-link {
+  background-color: transparent;
+  color: gray;
+}
+
+.product-search nav i {
+  font-size: 34px;
+  color: gray;
 }
 /*# sourceMappingURL=styles.css.map */
