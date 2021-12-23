@@ -165,6 +165,12 @@ nav.navbar ul.navbar-nav a.nav-link.active {
   font-weight: 400;
 }
 
+.main_banner .container-fluid .row p.text {
+  font-size: 24px;
+  text-align: center;
+  color: white;
+}
+
 .second_banner {
   background: url("../img/second_banner.png");
   background-size: cover;
