@@ -67,6 +67,14 @@ a {
     border-radius: 10px;
 }
 
+.slick-next {
+    right: -5px;
+}
+
+.slick-prev {
+    left: -5px;
+}
+
 .promobar {
     background-color: $main_red;
     color: white;
@@ -279,9 +287,15 @@ nav.navbar {
             justify-content: center;
             align-items: center;
             gap: 0 5px;
+            @media only screen and (max-width: 575px) {
+                font-size: 14px;
+            }
             i {
                 color: $main_red;
                 font-size: 12px;
+                @media only screen and (max-width: 575px) {
+                    font-size: 10px;
+                }
             }
         }
     }
@@ -437,9 +451,15 @@ footer {
             justify-content: center;
             align-items: center;
             gap: 0 5px;
+            @media only screen and (max-width: 575px) {
+                font-size: 14px;
+            }
             i {
                 color: $main_red;
                 font-size: 12px;
+                @media only screen and (max-width: 575px) {
+                    font-size: 10px;
+                }
             }
         }
     }
@@ -471,7 +491,7 @@ footer {
     }
     a.facebook {
         position: absolute;
-        top: 25%;
+        top: 20%;
         right: 10px;
         @media only screen and (max-width: 990px) {
             display: none;
@@ -483,7 +503,7 @@ footer {
     }
     a.whatsapp {
         position: absolute;
-        top: 25%;
+        top: 20%;
         left: 10px;
         @media only screen and (max-width: 990px) {
             display: none;
@@ -496,6 +516,67 @@ footer {
     .filters {
         input {
             border-radius: 25px;
+        }
+        label.form-label {
+            font-size: 14px;
+        }
+    }
+    .product_info {
+        color: $gray;
+        .product_card {
+            .card {
+                box-shadow: 4px 4px 9px 0px #0000005e;
+                border-radius: 15px;
+                .img_product {
+                    margin-bottom: 10px;
+                    img {
+                        border: 1px solid black;
+                    }
+                }
+                .img_nav {
+                    padding: 20px 0;
+                    img {
+                        border: 1px solid black;
+                        box-shadow: 4px 4px 9px 0px #0000005e;
+                        margin: 0 10px;
+                    }
+                    .slick-slide.slick-active.slick-current {
+                        border: 1px solid $main_red;
+                        margin: 0 10px;
+                    }
+                }
+                p {
+                    margin: 0;
+                }
+                p.name,
+                p.sku {
+                    font-size: 20px;
+                }
+                p.price {
+                    font-size: 24px;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+    .more_info {
+        .nav-pills .nav-link {
+            color: #fff;
+            background-color: #0d6efd;
+            background-color: transparent;
+            color: #626260;
+            font-size: 24px;
+            border-radius: 0;
+            @media only screen and (max-width: 1024px) {
+                font-size: 20px;
+            }
+            @media only screen and (max-width: 575px) {
+                font-size: 15px;
+                padding: 5px;
+            }
+        }
+        .nav-pills .nav-link.active {
+            border-bottom: 3px solid red;
         }
     }
     p.title {
